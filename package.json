@@ -1,0 +1,32 @@
+{
+  "name": "nodebb-plugin-cash",
+  "version": "0.0.1",
+  "description": "NodeBB Cash MOD",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/psychobunny/nodebb-plugin-cash"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "cash",
+    "points",
+    "posting"
+  ],
+  "author": {
+    "name": "psychobunny",
+    "email": "psycho.bunny@hotmail.com"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/psychobunny/nodebb-plugin-cash/issues"
+  },
+  "readme": "# NodeBB Sample Admin Page\nThis NodeBB plugin creates a simple admin page that can be used as the basis for your next plugin's ACP page.\n## Installation\n    npm install nodebb-plugin-admin-sample\n## Screenshots\n ![NodeBB Sample Admin Page](http://i.imgur.com/0IP3bSl.png)",
+  "readmeFilename": "README.md",
+  "_id": "nodebb-cash@0.0.1",
+  "_from": "nodebb-cash@~0.0.1"
+}
