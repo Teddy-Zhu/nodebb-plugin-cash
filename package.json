@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/psychobunny/nodebb-plugin-cash/issues"
   },
-  "readme": "# NodeBB Sample Admin Page\nThis NodeBB plugin creates a simple admin page that can be used as the basis for your next plugin's ACP page.\n## Installation\n    npm install nodebb-plugin-admin-sample\n## Screenshots\n ![NodeBB Sample Admin Page](http://i.imgur.com/0IP3bSl.png)",
+  "readme": "# NodeBB Cash MOD\nThis plugin creates a virtual currency system for your NodeBB forum. Users can then earn cash based on the quality of their posts (ie. bigger posts earn more points).\nThe amount earned per character can be defined in the Cash ACP, as well as the name of the currency itself.\nTop earners can be seen at /users/cash [IN PROGRESS].\n## Installation\n    npm install nodebb-plugin-cash\n## Screenshots\n![NodeBB Cash MOD - Topics page](http://i.imgur.com/Uujt3PW.png)\n![NodeBB Cash MOD - Admin Page](http://i.imgur.com/froGFIT.png)\n## Credits\nCoin Art by [morgan3d](http://opengameart.org/users/morgan3d).",
   "readmeFilename": "README.md",
   "_id": "nodebb-cash@0.0.1",
   "_from": "nodebb-cash@~0.0.1"
