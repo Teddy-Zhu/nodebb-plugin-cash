@@ -22,3 +22,10 @@ Find out more about this plugin on my [blog](http://burnaftercompiling.com/nodeb
 ## Credits
 
 Coin Art by [morgan3d](http://opengameart.org/users/morgan3d).
+
+
+## About NodeBB
+
+Don't forget to [like NodeBB on Facebook](http://www.facebook.com/nodebb)!
+
+Check out the [latest NodeBB Forum Demo](http://try.nodebb.com) :)
