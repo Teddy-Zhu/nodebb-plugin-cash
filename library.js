@@ -51,7 +51,7 @@ CashMOD = {
 	
 
 	addProfileInfo: function(profileInfo, callback) {
-		var currency_name = meta.config['cash:currency_name'] || constants.defaults.constants.defaults.currency_name;
+		var currency_name = meta.config['cash:currency_name'] || constants.defaults.currency_name;
 
 		user.getUserField(profileInfo.uid, 'currency', function(err, data) {
 			profileInfo.profile += "<span class='cash-mod-currency'><img src='" + nconf.get('url') + "plugins/nodebb-plugin-cash/coin1.png' /> " + (data || 0) + " " + currency_name + "</span>";
