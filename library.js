@@ -1,10 +1,9 @@
 var	fs = require('fs'),
 	path = require('path'),
-	nconf = require('nconf'),
-	meta = require('../../src/meta.js'),
-	user = require('../../src/user.js'),
-	templates = module.parent.require('../public/src/templates.js');
-	
+	nconf = require.main.require('nconf'),
+	meta = require.main.require('./src/meta'),
+	user = require.main.require('./src/user');
+
 var constants = Object.freeze({
 	'name': "Cash MOD",
 	'admin': {
@@ -18,8 +17,20 @@ var constants = Object.freeze({
 });
 
 
+function initialize(app, middleware, controllers) {
+	require('./lib/controllers')(controllers);
+	require('./lib/routes/cashAdmin')(app, middleware,controllers);
+}
 CashMOD = {
-	// TODO: Move these into an "admin" class, I cannot do this until plugins.js is updated to register hooks as such 
+	init:function (params, callback){
+		var router = params.router,
+			middleware = params.middleware,
+			controllers = params.controllers;
+
+		initialize(router, middleware, controllers);
+		callback();
+	},
+	// TODO: Move these into an "admin" class, I cannot do this until plugins.js is updated to register hooks as such
 	admin_registerPlugin: function(custom_header, callback) {
 		custom_header.plugins.push({
 			"route": constants.admin.route,
@@ -48,7 +59,7 @@ CashMOD = {
 			callback(null, custom_routes);
 		});
 	},
-	
+
 
 	addProfileInfo: function(profileInfo, callback) {
 		var currency_name = meta.config['cash:currency_name'] || constants.defaults.constants.defaults.currency_name;
@@ -56,7 +67,7 @@ CashMOD = {
 		user.getUserField(profileInfo.uid, 'currency', function(err, data) {
 			profileInfo.profile += "<span class='cash-mod-currency'><img src='" + nconf.get('url') + "plugins/nodebb-plugin-cash/coin1.png' /> " + (data || 0) + " " + currency_name + "</span>";
 			callback(err, profileInfo);
-		});		
+		});
 	},
 
 	increaseCurrencyByPostData: function(postData) {
@@ -75,7 +86,7 @@ CashMOD = {
 				timeout: 2500
 			});
 		}, 750);
-		
+
 	}
 
 

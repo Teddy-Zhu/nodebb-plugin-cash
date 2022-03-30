@@ -3,15 +3,20 @@
 	"name": "NodeBB Cash MOD",
 	"description": "NodeBB Cash MOD system",
 	"url": "https://github.com/psychobunny/nodebb-plugin-cash",
-	"library": "./library.js",
+	"main": "./library.js",
 	"hooks": [
 		{ "hook": "filter:admin.header.build", "method": "admin_registerPlugin", "callbacked": false },
-		{ "hook": "filter:admin.create_routes", "method": "admin_addRoute", "callbacked": true },
+		{
+			"hook": "static:app.load", "method": "init"
+		},
 		{ "hook": "filter:posts.custom_profile_info", "method": "addProfileInfo", "callbacked": true },
 		{ "hook": "action:post.save", "method": "increaseCurrencyByPostData", "callbacked": false }
 	],
-	"staticDir": "./static",
-	"css": [
-		"style.css"
-	]
+	"staticDirs": {
+		"static": "./static"
+	},
+	"less": [
+		"static/style.less"
+	],
+	"templates": "./templates"
 }

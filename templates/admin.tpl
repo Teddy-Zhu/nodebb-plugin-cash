@@ -3,7 +3,7 @@
 
 <form>
 	<p>
-		Adjust how much cash a poster earns when they create a new post. 
+		Adjust how much cash a poster earns when they create a new post.
 	</p><br />
 	<div class="alert alert-info">
 		<p>
@@ -16,9 +16,3 @@
 </form>
 
 <button class="btn btn-lg btn-primary" id="save">Save</button>
-
-<script>
-	require(['forum/admin/settings'], function(Settings) {
-		Settings.prepare();
-	});
-</script>
